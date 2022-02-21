@@ -1,0 +1,357 @@
+[
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Обычные пользователи",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$bQlI6zRrCj6QeUCWxZyXB9$5uoyYDGF2QSuLypYGLagnW+zhRvlcRkDV8zEMKQGab0=",
+    "last_login": "2021-10-31T22:10:58.496Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-10-30T14:43:41.826Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$hNWT53gFtavcMhzQzgAjz3$sXUnESGd364Y8ELW94uSFil3wqFUHIVD4B71/h/mzok=",
+    "last_login": "2021-10-30T14:50:40.085Z",
+    "is_superuser": false,
+    "username": "user1",
+    "first_name": "user1",
+    "last_name": "user1",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-10-30T14:48:33Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "mainapp.category",
+  "pk": 1,
+  "fields": {
+    "name": "Первые блюда",
+    "description": ""
+  }
+},
+{
+  "model": "mainapp.category",
+  "pk": 2,
+  "fields": {
+    "name": "Вторые блюда",
+    "description": ""
+  }
+},
+{
+  "model": "mainapp.category",
+  "pk": 3,
+  "fields": {
+    "name": "Салаты",
+    "description": ""
+  }
+},
+{
+  "model": "mainapp.category",
+  "pk": 4,
+  "fields": {
+    "name": "Десерты",
+    "description": ""
+  }
+},
+{
+  "model": "mainapp.category",
+  "pk": 5,
+  "fields": {
+    "name": "Выпечка",
+    "description": ""
+  }
+},
+{
+  "model": "mainapp.category",
+  "pk": 6,
+  "fields": {
+    "name": "Напитки",
+    "description": ""
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 1,
+  "fields": {
+    "name": "Морковь"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 2,
+  "fields": {
+    "name": "Картофель"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 3,
+  "fields": {
+    "name": "Хлеб"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 4,
+  "fields": {
+    "name": "Вода"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 5,
+  "fields": {
+    "name": "Соль"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 6,
+  "fields": {
+    "name": "Баранина"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 7,
+  "fields": {
+    "name": "Мясо"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 8,
+  "fields": {
+    "name": "Рыба"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 9,
+  "fields": {
+    "name": "Сахар"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 10,
+  "fields": {
+    "name": "Мука"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 11,
+  "fields": {
+    "name": "Макароны"
+  }
+},
+{
+  "model": "mainapp.ingredient",
+  "pk": 12,
+  "fields": {
+    "name": "Фарш"
+  }
+},
+{
+  "model": "mainapp.recipe",
+  "pk": 1,
+  "fields": {
+    "category": 5,
+    "name": "Перепечи",
+    "image": "dishes_images/perepechi.jpg",
+    "short_desc": "Перепечи по-глазовски",
+    "description": "Смешать и запечь.",
+    "time_create": "2021-10-30T14:53:23.162Z",
+    "time_update": "2021-10-31T22:13:25.303Z",
+    "is_active": true,
+    "author": "автор не известен",
+    "ingredients": [
+      4,
+      5,
+      7,
+      10
+    ]
+  }
+},
+{
+  "model": "mainapp.recipe",
+  "pk": 2,
+  "fields": {
+    "category": 4,
+    "name": "Хлеб с солью",
+    "image": "dishes_images/bread.jpg",
+    "short_desc": "Блюдо для гурманов",
+    "description": "Порезать, посолить",
+    "time_create": "2021-10-30T14:54:37.946Z",
+    "time_update": "2021-10-30T23:19:38.047Z",
+    "is_active": true,
+    "author": "автор не известен",
+    "ingredients": [
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "mainapp.recipe",
+  "pk": 3,
+  "fields": {
+    "category": 2,
+    "name": "Хлеб с водой",
+    "image": "dishes_images/bread_water_2.jpg",
+    "short_desc": "Традиционно сытное блюдо, быстрое в приготовлении.",
+    "description": "Порезать, налить.",
+    "time_create": "2021-10-30T15:07:32.523Z",
+    "time_update": "2021-10-30T23:19:26.232Z",
+    "is_active": true,
+    "author": "автор не известен",
+    "ingredients": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "mainapp.recipe",
+  "pk": 4,
+  "fields": {
+    "category": 2,
+    "name": "Шашлык",
+    "image": "dishes_images/shashlyk.jpg",
+    "short_desc": "Шашлык по-ингушски",
+    "description": "Зарезать, порезать, пожарить на огне.",
+    "time_create": "2021-10-30T22:24:57.188Z",
+    "time_update": "2021-10-30T23:20:20.142Z",
+    "is_active": true,
+    "author": "автор не известен",
+    "ingredients": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "mainapp.recipe",
+  "pk": 5,
+  "fields": {
+    "category": 2,
+    "name": "Торт",
+    "image": "dishes_images/tort.jpg",
+    "short_desc": "Торт на скорую руку",
+    "description": "Взболтать, намазать, запечь.",
+    "time_create": "2021-10-30T22:34:48.162Z",
+    "time_update": "2021-10-30T23:19:19.680Z",
+    "is_active": true,
+    "author": "автор не известен",
+    "ingredients": [
+      4,
+      5,
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "mainapp.recipe",
+  "pk": 6,
+  "fields": {
+    "category": 2,
+    "name": "Пирог",
+    "image": "dishes_images/pirog.jpg",
+    "short_desc": "Пирог с вареньем",
+    "description": "Замесить тесто, поставить в печь.",
+    "time_create": "2021-10-30T22:35:44.174Z",
+    "time_update": "2021-10-30T23:19:00.073Z",
+    "is_active": true,
+    "author": "автор не известен",
+    "ingredients": [
+      4,
+      5,
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "mainapp.recipe",
+  "pk": 7,
+  "fields": {
+    "category": 2,
+    "name": "Макароны по-флотски",
+    "image": "dishes_images/makarony-po-flotski.jpg",
+    "short_desc": "Незамысловатый народный рецепт",
+    "description": "Сварить, пожарить, перемешать.",
+    "time_create": "2021-10-30T23:25:13.350Z",
+    "time_update": "2021-10-30T23:25:13.350Z",
+    "is_active": true,
+    "author": "автор не известен",
+    "ingredients": [
+      5,
+      11,
+      12
+    ]
+  }
+},
+{
+  "model": "mainapp.recipe",
+  "pk": 8,
+  "fields": {
+    "category": 2,
+    "name": "Хлеб подсушенный",
+    "image": "dishes_images/bread_2.jpg",
+    "short_desc": "Рецепт, не требующий стараний",
+    "description": "Взять с полки старый хлеб.",
+    "time_create": "2021-10-30T23:29:39.152Z",
+    "time_update": "2021-10-30T23:29:39.152Z",
+    "is_active": true,
+    "author": "автор не известен",
+    "ingredients": [
+      3
+    ]
+  }
+},
+{
+  "model": "mainapp.recipe",
+  "pk": 9,
+  "fields": {
+    "category": 2,
+    "name": "Шашлык",
+    "image": "dishes_images/shashlyk-po-gruzinski_1.jpg",
+    "short_desc": "Шашлык по-грузински",
+    "description": "Зарезать, порезать, пожарить.",
+    "time_create": "2021-10-31T22:12:23.586Z",
+    "time_update": "2021-10-31T22:12:23.587Z",
+    "is_active": true,
+    "author": "автор не известен",
+    "ingredients": [
+      5,
+      6
+    ]
+  }
+}
+]

@@ -1,0 +1,23 @@
+{% load static %}
+
+<div class="col">
+    <div class="card h-100">
+      <a href="{% url 'mainapp:recipe' recipe.pk %}">
+        <img src="/media/{{ recipe.image }}" class="card-img-top" alt="{{ recipe.short_desc }}">
+        <div class="text">
+            <img src="{% static 'mainapp/header_images/icon-hover.png' %}" alt="arrow">
+            <h5>Ингредиенты</h5>
+            <ul>
+                {% for item in recipe.ingredients.all %}
+                    <li>{{ item.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">{{ recipe.name }}</h5>
+        <p class="card-text">{{ recipe.short_desc }}</p>
+        <p class="card-text author"><strong>Автор: </strong>{{ recipe.author }}</p>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="content">
+
+        <h2>Рецепты</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          {% for recipe in recipes %}
+              {% include 'mainapp/include/inc_card.html' %}
+          {% endfor %}
+        </div><!--row-->
+
+        <div class="pagination">
+            {% if recipes.has_previous %}
+                <a href="{% url 'mainapp:page' category.id recipes.previous_page_number %}">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+            {% endif %}
+            <span class="current">
+                страница {{ recipes.number }} из
+                {{ recipes.paginator.num_pages }}
+            </span>
+            {% if recipes.has_next %}
+                <a href="{% url 'mainapp:page' category.id recipes.next_page_number %}">
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            {% endif %}
+        </div><!--pagination-->
+
+    </div><!--content-->
+{% endblock %}

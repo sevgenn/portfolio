@@ -1,0 +1,37 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block menu %}
+    {% include 'mainapp/include/inc_submenu_for_recipe.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="card">
+          <div class="top-block">
+              <div class="recipe-img">
+                <img src="/media/{{ recipe.image }}" class="recipe-img" alt="{{ recipe.short_description }}">
+              </div>
+              <div class="ingredients">
+                <h1>{{ recipe.name }}</h1>
+                <h3>Ингредиенты:</h3>
+                <ul>
+                    {% for item in ingredients %}
+                        <li>{{ item.name }}</li>
+                    {% endfor %}
+                </ul>
+              </div><!--ingredients-->
+          </div><!--top-block-->
+
+          <div class="card-body">
+            <div class="recipe">
+              <h3>Рецепт:</h3>
+              <p class="card-text">{{ recipe.description|linebreaks }}</p>
+            </div>
+            <div class="recipe">
+              <p class="card-text"><span><strong>Автор: </strong></span> {{ recipe.author }} </p>
+            </div>
+          </div><!--card-body-->
+        </div><!--card-->
+    </div><!--content-->
+{% endblock %}

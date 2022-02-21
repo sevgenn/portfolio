@@ -1,0 +1,35 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="content">
+
+        <h2>Рецепт дня</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          {% for recipe in today_list %}
+              {% include 'mainapp/include/inc_card.html' %}
+          {% endfor %}
+        </div><!--row-->
+
+        <h2>Рецепты</h2>
+
+<form action="" method="GET">
+    Выбор по ингредиентам
+    <select class="form-select ingredient" aria-label="Default select example" name="ingredient">
+            <option>-----</option>
+        {% for ingredient in ingredients %}
+            <option value="{{ ingredient.id }}"
+                    {% if ingredient.id == item_id %}selected="selected"{% endif %}>{{ ingredient.name }}</option>
+        {% endfor %}
+        <input type="submit" value="Выбрать">
+    </select>
+</form>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+          {% for recipe in recipes %}
+              {% include 'mainapp/include/inc_card.html' %}
+          {% endfor %}
+        </div><!--row-->
+
+    </div><!--content-->
+{% endblock %}
